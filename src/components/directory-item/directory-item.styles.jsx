@@ -35,6 +35,10 @@ export const Body = styled.div`
         font-weight: lighter;
         font-size: 16px;
     }
+
+    @media screen and (max-width: 800px) {
+        padding: 0 10px;
+    }
 `;
 
 export const DirectoryItemContainer = styled(Link)`
@@ -47,6 +51,7 @@ export const DirectoryItemContainer = styled(Link)`
     border: 1px solid black;
     margin: 0 7.5px 15px;
     overflow: hidden;
+    position: relative;
 
     &:hover {
         cursor: pointer;
@@ -66,5 +71,9 @@ export const DirectoryItemContainer = styled(Link)`
 
     &:last-child {
         margin-left: 7.5px;
+    }
+
+    @media screen and (max-width: 800px) {
+        height: 200px;
     }
 `;

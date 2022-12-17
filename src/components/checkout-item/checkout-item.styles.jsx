@@ -13,6 +13,21 @@ export const CheckoutItemContainer = styled.div`
     .price {
         width: 23%;
     }
+
+    .name {
+        @media screen and (max-width: 1000px) {
+            width: 35%;
+        }
+    }
+    .price {
+        @media screen and (max-width: 1000px) {
+            width: 10%;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 16px;
+    }
 `;
 
 export const ImageContainer = styled.div`
@@ -36,6 +51,10 @@ export const Quantity = styled.span`
 
     .value {
         margin: 0 10px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 20%;
     }
 `;
 

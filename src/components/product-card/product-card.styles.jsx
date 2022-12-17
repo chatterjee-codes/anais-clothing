@@ -16,6 +16,7 @@ export const ProductCartContainer = styled.div`
     height: 350px;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     ${InvertedButton} {
         width: 80%;
@@ -35,13 +36,52 @@ export const ProductCartContainer = styled.div`
             display: flex;
         }
     }
+
+    @media screen and (max-width: 800px) {
+        width: 45vw;
+        height: 400px;
+
+        ${InvertedButton} {
+            width: 95%;
+            display: block;
+            min-width: unset;
+            opacity: 0.8;
+            padding: 0 10px;
+        }
+        &:hover {
+            ${Image} {
+                opacity: unset;
+            }
+
+            ${InvertedButton} {
+                opacity: unset;
+            }
+        }
+    }
 `;
 export const Name = styled.span`
     width: 90%;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: 14px;
+    }
 `;
 export const Price = styled.span`
     width: 10%;
+
+    @media screen and (max-width: 800px) {
+        width: 20%;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 14px;
+    }
 `;
 
 export const Footer = styled.div`
@@ -50,4 +90,11 @@ export const Footer = styled.div`
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        height: 15%;
+        justify-content: flex-start;
+    }
 `;
