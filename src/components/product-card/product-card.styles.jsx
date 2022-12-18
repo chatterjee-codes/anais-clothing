@@ -13,7 +13,7 @@ export const ProductCartContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 440px;
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -22,7 +22,7 @@ export const ProductCartContainer = styled.div`
         width: 80%;
         opacity: 0.7;
         position: absolute;
-        top: 255px;
+        top: 350px;
         display: none;
     }
 
@@ -47,6 +47,7 @@ export const ProductCartContainer = styled.div`
             min-width: unset;
             opacity: 0.8;
             padding: 0 10px;
+            top: 250px;
         }
         &:hover {
             ${Image} {
