@@ -1,14 +1,31 @@
+import { Fragment } from 'react';
+import { useSelector } from 'react-redux';
+
 import DirectoryItem from '../directory-item/directory-item.component';
+
+import { selectCurrentuser } from '../../store/user/user.selector';
 
 import { DirectoryContainer } from './directory.styles';
 
 const Directory = ({ categories }) => {
+    const currentUser = useSelector(selectCurrentuser);
     return (
-        <DirectoryContainer>
-            {categories.map((category) => (
-                <DirectoryItem key={category.id} category={category} />
-            ))}
-        </DirectoryContainer>
+        <Fragment>
+            {currentUser ? (
+                <h2
+                    style={{
+                        textAlign: 'center'
+                    }}>
+                    Welcome {currentUser.displayName}!
+                </h2>
+            ) : null}
+
+            <DirectoryContainer>
+                {categories.map((category) => (
+                    <DirectoryItem key={category.id} category={category} />
+                ))}
+            </DirectoryContainer>
+        </Fragment>
     );
 };
 
