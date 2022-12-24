@@ -14,9 +14,10 @@ const Directory = ({ categories }) => {
             {currentUser ? (
                 <h2
                     style={{
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        fontSize: '18px'
                     }}>
-                    Welcome {currentUser.displayName}!
+                    Welcome {currentUser.displayName.split(' ')[0]}!
                 </h2>
             ) : null}
 
